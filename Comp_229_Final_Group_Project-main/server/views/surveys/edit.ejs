@@ -1,0 +1,135 @@
+<%- include ('../partials/header.ejs') %>
+
+<div class="container">
+  <div class="row">
+    <div class="offset-md-3 col-md-6">
+      <h1 style="color: #31bebe">Edit Response</h1>
+      <form class="form" method="POST">
+        <br />
+        <br />
+        <div class="form-group">
+          <label for="personName">Person Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="personName"
+            placeholder="Enter the person name"
+            value="<%= surveyResponseToEdit.personName %>"
+            name="personName"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="emailId">Email Id</label>
+          <input
+            type="email"
+            class="form-control"
+            id="emailId"
+            placeholder="Enter the email id"
+            value="<%= surveyResponseToEdit.emailId %>"
+            name="emailId"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="currentStatus"
+            >Which clothing categories are you interested in?</label
+          >
+          <br />
+          <textarea
+            type="text"
+            class="form-control"
+            id="currentStatus"
+            placeholder="Enter a brief description"
+            name="currentStatus"
+            rows="2"
+            required
+          >
+<%= surveyResponseToEdit.currentStatus %></textarea
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="unemploymentDuration">What is your size?(s/m/L)?</label>
+          <br />
+          <textarea
+            type="text"
+            class="form-control"
+            id="unemploymentDuration"
+            placeholder="Enter unemployement duration"
+            name="unemploymentDuration"
+            rows="2"
+            required
+          >
+<%= surveyResponseToEdit.unemploymentDuration %></textarea
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="reasonForUnemployment"
+            >Are you looking for any specific brands?</label
+          >
+          <br />
+          <textarea
+            type="text"
+            class="form-control"
+            id="reasonForUnemployment"
+            placeholder="Enter unemployement reason"
+            name="reasonForUnemployment"
+            rows="5"
+            required
+          >
+<%= surveyResponseToEdit.reasonForUnemployment %></textarea
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="mentalHealthOnUnemployment"
+            >Which clothing kind of dress are you interested in?
+            (formal/casual)</label
+          >
+          <br />
+          <textarea
+            type="text"
+            class="form-control"
+            id="mentalHealthOnUnemployment"
+            placeholder="Enter your current mental health details"
+            name="mentalHealthOnUnemployment"
+            rows="5"
+            required
+          >
+<%= surveyResponseToEdit.mentalHealthOnUnemployment %></textarea
+          >
+        </div>
+
+        <div class="form-group">
+          <label for="localActionOnUnemployment"
+            >How would you like to receive updates on new arrivals and
+            promotions?</label
+          >
+          <br />
+          <textarea
+            type="text"
+            class="form-control"
+            id="localActionOnUnemployment"
+            placeholder="Enter suggested solutions demanded from local authorities"
+            name="localActionOnUnemployment"
+            rows="5"
+            required
+          >
+<%= surveyResponseToEdit.localActionOnUnemployment %></textarea
+          >
+        </div>
+
+        <button class="btn btn-primary" type="submit">
+          <i class="fas fa-edit"></i>Submit
+        </button>
+        <a href="/surveys" class="btn btn-warning">
+          <i class="fas fa-undo"></i>Cancel
+        </a>
+      </form>
+    </div>
+  </div>
+</div>

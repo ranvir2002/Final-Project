@@ -1,0 +1,74 @@
+:host {
+  flex: auto;
+}
+
+.contact__wrapper {
+  width: 100%;
+  height: 100%;
+  padding: 10px 0;
+}
+
+.content-left {
+  flex-basis: 35%;
+}
+
+.content-right {
+  flex-basis: 60%;
+}
+
+.content-left p {
+  margin-top: 30px;
+}
+
+.content-left p i {
+  margin-right: 15px;
+  color: #f57482;
+  font-size: 26px;
+}
+
+.social-media {
+  margin-top: 30px;
+}
+
+.social-media a {
+  text-decoration: none;
+  font-size: 30px;
+  margin-right: 15px;
+  color: #ababab;
+  display: inline-block;
+  transition: transform 0.5s;
+}
+
+.social-media a:hover {
+  color: #f57482;
+  transform: translateY(-5px);
+}
+
+.btn.btn2 {
+  display: inline-block;
+  background: #a1ce9b;
+  margin-bottom: 100px;
+}
+
+.content-right form {
+  width: 100%;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 15px 0;
+  font-size: 18px;
+  border-radius: 6px;
+}
+
+input[type="text"] {
+  padding: 10px;
+}
+input[type="email"] {
+  padding: 10px;
+}
+textarea[type="text"] {
+  padding: 10px;
+}

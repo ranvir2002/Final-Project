@@ -1,0 +1,67 @@
+<div class="contact__wrapper">
+  <div class="container">
+    <div class="row">
+      <div class="content-left">
+        <h1 class="sub-title">About Us</h1>
+
+        <p><i class="fa-solid fa-paper-plane"></i> hello@gmail.com</p>
+        <p><i class="fa-solid fa-paper-plane"></i> world@gmail.com</p>
+        <p><i class="fa-solid fa-paper-plane"></i> coder@gmail.com</p>
+      </div>
+      <div class="content-right">
+        <form name="form-group submit-to-google-sheet">
+          <input
+            class="form-control"
+            type="text"
+            name="Name"
+            placeholder="Enter Your Name"
+            required
+          />
+          <input
+            class="form-control"
+            type="email"
+            name="Email"
+            placeholder="Enter Your Email"
+            required
+          />
+          <textarea
+            class="form-control"
+            type="text"
+            name="Message"
+            rows="10"
+            placeholder="Enter Your Message"
+          ></textarea>
+          <button
+            class="form-control"
+            type="submit"
+            class="btn btn2"
+            onclick="fun()"
+          >
+            Submit
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  function fun() {
+    const scriptURL =
+      "https://script.google.com/macros/s/AKfycbx3gahnui0_O33VWyXZF1exToRkC2mBE86FlmCnKVxbuQeJBN6QlzsPFbA5kET0aXyMpg/exec";
+    const form = document.forms["submit-to-google-sheet"];
+    form.addEventListener("submit", (e) => {
+      if (e == "") {
+        console.log("no data added");
+      } else {
+        document.location = "/";
+        alert("Message sent successfully");
+        e.preventDefault();
+
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => console.log("Success!", response))
+          .catch((error) => console.error("Error!", error.message));
+      }
+    });
+  }
+</script>

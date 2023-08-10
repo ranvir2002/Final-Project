@@ -1,0 +1,86 @@
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="offset-md-3 col-md-6">
+            <h1 style="color: #31bebe;">Add new survey response</h1>
+            <br>
+            <br>
+
+            <form class="form" method="POST">
+                <div class="form-group">
+                    <label for="personName">Person Name</label>
+                    <input type="text"
+                           class="form-control"
+                           id="personName"
+                           placeholder="Enter the person name"
+                           name="personName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="emailId">Email Id</label>
+                    <input type="email"
+                           class="form-control"
+                           id="emailId"
+                           placeholder="Enter the email id"
+                           name="emailId" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="currentStatus">Which clothing categories are you interested in?</label>
+                    <br>
+                    <textarea type="text" class="form control"
+                              id="currentStatus"
+                              placeholder="Enter a brief description"
+                              name="currentStatus" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="unemploymentDuration"> What is your size?(s/m/L)?</label>
+                    <br>
+                    <textarea type="text" class="form control"
+                              id="unemploymentDuration"
+                              placeholder="Enter unemployement duration"
+                              name="unemploymentDuration" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="reasonForUnemployment">Are you looking for any specific brands?</label>
+                    <br>
+                    <textarea type="text" class="form control"
+                              id="reasonForUnemployment"
+                              placeholder="Enter unemployement reason"
+                              name="reasonForUnemployment" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="mentalHealthOnUnemployment">Which clothing categories are you interested in? (formal/casual)
+                    </label>
+                    <br>
+                    <textarea type="text" class="form control"
+                              id="mentalHealthOnUnemployment"
+                              placeholder="Enter unemployement reason"
+                              name="mentalHealthOnUnemployment" required></textarea>
+                </div>
+
+
+                <div class="form-group">
+                    <label for="localActionOnUnemployment">How would you like to receive updates on new arrivals and promotions?</label>
+                    <br>
+                    <textarea type="text" class="form control"
+                              id="localActionOnUnemployment"
+                              placeholder="Enter unemployement reason"
+                              name="localActionOnUnemployment" required></textarea>
+                </div>
+
+                <button class="btn btn-primary" type="submit" style=" margin-right: 10px;">
+                    <i class="fas fa-edit"></i>Submit
+                </button>
+                <a href="/surveys" class="btn btn-warning" style=" margin-left: 10px;">
+                    <i class="fas fa-undo"></i>Cancel
+                </a>
+            </form>
+        </div>
+    </div>
+</div>
